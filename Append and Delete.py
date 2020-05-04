@@ -8,6 +8,8 @@ import sys
 def appendAndDelete(s, t, k):
     a=list(s)
     b=list(t)
+    Sin=0
+    tsin=0
     c=0
     if s==t:
         c=len(a)+len(b)+1
@@ -17,13 +19,13 @@ def appendAndDelete(s, t, k):
             if a[i]!=b[i]:
                 break
             j+=1
-        nonmatch1=len(a)-j
-        nonmatch2=len(b)-j
-        c= nonmatch1+nonmatch2
+        Sin=len(a)-j
+        tsin=len(b)-j
+        c= Sin+tsin
 
     
 
-    if k==c:
+    if (k==c) or ((Sin +tsin < k) and ((Sin +tsin - k) % 2 == 0)) or (len(s)+len(t)<= k):
         return "Yes"
     return "No"
 
