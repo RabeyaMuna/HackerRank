@@ -1,0 +1,6 @@
+a,b=(int(input()),input().split())
+c,d=(int(input()),input().split())
+c1=set(b).difference(set(d))
+d1=set(d).difference(set(b))
+r=c1.union(d1)
+print('\n'.join(sorted(r, key=int)))
