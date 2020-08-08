@@ -1,0 +1,5 @@
+n=int(input())
+s=set(map(int,input().split()))
+n1=int(input())
+s1=set(map(int,input().split()))
+print(len(s.intersection(s1)))
